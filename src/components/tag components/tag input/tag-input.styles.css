@@ -1,0 +1,12 @@
+.tag-input {
+  border: none;
+  border-bottom: solid 2px lightgray;
+  width: 150px;
+  padding: 5px;
+  margin: 10px 0 10px;
+}
+
+.tag-input:focus {
+  outline: none;
+  border-bottom: solid 1px black;
+}

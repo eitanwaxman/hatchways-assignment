@@ -1,0 +1,21 @@
+.expand-button-wrapper {
+  margin-left: auto;
+}
+.expand-button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+}
+
+.expand-button-icon {
+  fill: gray;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.expand-button-icon:hover {
+  fill: black;
+}

@@ -1,0 +1,14 @@
+.search-bar {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-bottom: solid 3px lightgray;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-bottom: solid 2px;
+}

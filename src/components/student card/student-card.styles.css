@@ -1,0 +1,58 @@
+.student-card-wrapper hr {
+  border: none;
+  border-top: solid 3px;
+  color: lightgray;
+}
+
+.student-card-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.student-card-profile-pic {
+  margin: 20px;
+  width: 7%;
+  min-width: 70px;
+  height: 7%;
+  min-height: 70px;
+  border-radius: 50%;
+  border: solid 1px;
+  border-color: lightgray;
+}
+
+.student-card-header {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.student-card-name {
+  margin: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.student-card-other-details {
+  margin-left: 10%;
+}
+.student-card-other-details p {
+  margin: 5px;
+}
+
+.tags-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .student-card-name {
+    font-size: 1.3rem;
+  }
+
+  .student-card-other-details p {
+    font-size: 0.7rem;
+  }
+}

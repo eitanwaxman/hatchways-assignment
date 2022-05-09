@@ -1,0 +1,12 @@
+.tag {
+  background-color: lightgray;
+  width: fit-content;
+  padding: 7px;
+  border-radius: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  .tag {
+    font-size: 0.7rem;
+  }
+}
