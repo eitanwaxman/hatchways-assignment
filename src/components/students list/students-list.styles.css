@@ -17,7 +17,11 @@
   background: #555;
 }
 
-.students-list-wrapper {
+.search-bars-wrapper {
+  background-color: white;
+  top: 0;
+  margin-top: 15px;
+  position: sticky;
 }
 
 .students-list-container {
@@ -38,8 +42,8 @@
 
 @media only screen and (max-width: 600px) {
   .students-list-container {
-    margin: 3vh 10vw;
-    max-width: 80vw;
+    margin: 3vh 7vw;
+    max-width: 86vw;
     max-height: 94vh;
   }
 }

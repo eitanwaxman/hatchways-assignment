@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import { StudentsContext } from "../../contexts/students.context";
-import ExpandButton from "../expand button/expand-button.component";
-import Tag from "../tag components/tag/tag.component";
-import TagInput from "../tag components/tag input/tag-input.component";
+import { StudentsContext } from "../../../contexts/students.context";
+import ExpandButton from "../../expand button/expand-button.component";
+import Tag from "../../tag components/tag/tag.component";
+import TagInput from "../../tag components/tag input/tag-input.component";
 import TestScores from "../test scores/test-scores.component";
 import "./student-card.styles.css";
 

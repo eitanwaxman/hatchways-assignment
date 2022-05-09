@@ -1,8 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { StudentsContext } from "../../contexts/students.context";
-import { getStudentFinalData } from "../../utils/fetch-contacts.utils";
 import SeachBar from "../search bar/search-bar.component";
-import StudentCard from "../student card/student-card.component";
+import StudentCard from "../student components/student card/student-card.component";
 import "./students-list.styles.css";
 
 const StudentList = () => {
@@ -25,7 +24,8 @@ const StudentList = () => {
 
   useEffect(() => {
     if (students) {
-      const filter = [];
+      const studentFilter = [];
+
       students.forEach((student) => {
         const nameIncludes = () => {
           if (nameSearchInput) {
@@ -43,43 +43,40 @@ const StudentList = () => {
         };
 
         const tagsInclude = () => {
-          let valid = false;
+          let tagIncluded = false;
           if (tagSearchInput) {
             student.tags.forEach((tag) => {
               if (tag.toLowerCase().includes(tagSearchInput.toLowerCase())) {
-                valid = true;
+                tagIncluded = true;
               }
             });
-            return valid;
+            return tagIncluded;
           } else {
             return true;
           }
         };
 
-        const validate = () => {
-          console.log(tagsInclude());
-          return tagsInclude() && nameIncludes();
-        };
-
-        if (validate()) {
-          filter.push(student);
+        if (tagsInclude() && nameIncludes()) {
+          studentFilter.push(student);
         }
       });
-      setFilteredStudents(filter);
+      setFilteredStudents(studentFilter);
     }
   }, [nameSearchInput, tagSearchInput]);
 
   return (
-    <div className="students-list-wrapper">
+    <div>
       <div className="students-list-container">
-        <SeachBar
-          placeholderText="Search by name"
-          onChangeHandler={nameSearchInputHandler}
-        />
-        <SeachBar
-          placeholderText="Search by tag"
-          onChangeHandler={tagSearchInputHandler}
-        />
+        <div className="search-bars-wrapper">
+          <SeachBar
+            placeholderText="Search by name"
+            onChangeHandler={nameSearchInputHandler}
+          />
+          <SeachBar
+            placeholderText="Search by tag"
+            onChangeHandler={tagSearchInputHandler}
+          />
+        </div>
         {filteredStudents &&
           filteredStudents.map(
             ({

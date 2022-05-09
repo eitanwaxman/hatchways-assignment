@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { StudentsContext } from "../../contexts/students.context";
+import { StudentsContext } from "../../../contexts/students.context";
 import "./test-scores.styles.css";
 
 const TestScores = ({ studentId }) => {
